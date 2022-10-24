@@ -1,0 +1,25 @@
+Principais aprendizados no curso de Git e Github da DIO:
+
+COMANDOS
+cd abre o diretório citado depois dele. P.EX: cd /c vai abrir a “pasta” /c do meu computador;
+cd .. retorna pro diretório anterior. P.EX: se estou trabalhando em /c/workspace/livro-receitas/.git e digito cd .. vou voltar a trabalhar em /c/workspace/livro-receitas;
+mkdir cria um diretório (make directory) com o nome citado depois dele. P.EX: mkdir livro-receitas vai criar uma “pasta” chamada livro-receitas dentro do diretório que estou trabalhando (nesse caso é o /c/workspace);
+ls lista o conteúdo do diretório onde estou trabalhando. P.EX: ls dentro do /c/workspace vai mostrar livro-receitas (a pasta que acabei de criar lá dentro);
+mv move o repositório citado pra dentro do diretório citado. P.EX: mv estrogonofe.md ./receitas/ vai encaminhar o arquivo estrogonofe.md pra dentro da pasta receitas;
+echo imprime no console o texto que eu escrever depois dele OU cria um novo arquivo. Caso eu queira criar o novo arquivo, preciso indicar ao echo, através do símbolo > qual é o nome e extensão dele. P.EX: ao digital no console echo > README.md e dar enter, vai ser criado um arquivo de extensão .md chamado README dentro da pasta onde estou;
+crtl + l vai limpar o terminal; mesma coisa que digitar clear;
+git init inicia um repositório git vazio e oculto;
+git add abre caminho para adicionar alguma ação. Logo após digitar isso no terminal e dar enter, vou digitar outro comando git para concretizar minha ação de adicionar. Esse comando coloca os arquivos citados como staged, ou seja, em uma posição de “prontos pra entrar no palco”, “prontos para atuar”, “prontos para serem commitados”;
+git add * mesma atuação do git add mas selecionando tudo o que foi modificado, todas as alterações feitas em repositórios e diretórios que estão no meu espaço de trabalho;
+git commit -m cria o commit que digito entre aspas “” logo depois desse comando. P.EX: git commit -m “commit inicial” vai criar o commit chamado commit inicial do arquivo que eu estava trabalhando;
+git status traz informações atuais sobre o status daquele repositório que estou trabalhando, como em qual branch ele se encontra, se existe alguma alteração (algum commit a ser feito), etc. Quando há alterações a serem commitadas, ele próprio sugere o que e como devo fazer. É interessante criar o hábito de utilizar esse comando de tempos em tempos, pra ter certeza que não há pendências no repositório;
+git push origin master vai “empurrar”, encaminhar do repositório local para o repositório remoto. Quando fizer isso, ele vai pedir minha senha
+git pull origin master vai trazer pra minha máquina, “puxar”, o repositório que está no remoto. Isso é feito normalmente quando mais pessoas estão trabalhando no mesmo projeto, editam o mesmo arquivo, a mesma linha, simultaneamente e dá conflito na hora de empurrar o commit atual pro GitHub, caso outra pessoa tenha feito um commit antes de mim e meu arquivo já não esteja mais “atualizado”. Aí eu faço o pull, pra pegar a última versão disponível na nuvem, e fazer as alterações a partir dela;
+git clone vai clonar um repositório disponível na nuvem/remotamente/no GitHub para a minha máquina. Faço isso quando quero trabalhar naquele código, ajudar a desenvolver o código, acrescentar algo etc. Como preciso escrever a URL dele, antes de digitar esse comando no terminal Git, preciso abrir no GitHub o código que eu quero, clicar em code → clone → HTTPS e copiar o link disponível ali. P.EX: para clonar o repositório do Python, vou até a página dele no GitHub, copio a URL, vou ao meu terminal do Git e digito git clone https://github.com/python/cpython.git, dou enter e ele vai baixar todo o repositório pra eu poder trabalhar localmente, na minha máquina;
+git config --global user.email vai adicionar, “cadastrar” o e-mail que eu vou digitar, entre aspas “”, após esse comando. Já o git config --global user.name vai cadastrar o nome de usuário que vou digitar, entre aspas “”, após o comando. O ideal é que tanto e-mail quanto username sejam iguais ao cadastrados no GitHub, para que não haja grandes problemas na hora de identificação do usuário;
+git config --list lista de todas as configurações que estão especificamente no meu git. Dentre outras informações, ali aparece meu nome de usuário e meu e-mail, que usei para me “cadastrar” no git. Esse cadastro é necessário para que apareça sempre nos commits quem foi o autor, quem realizou aquelas alterações;
+git config --global --unset user.email vai “deletar” o e-mail cadastrado. Já o git config --global --unset user.name vai deletar o nome de usuário cadastrado;
+
+FLAGS:
+-a: mostra repositórios e/ou diretórios ocultos;
+-m: acrescenta comentário (usado na hora de escrever o commit);
